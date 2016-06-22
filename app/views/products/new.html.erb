@@ -1,5 +1,10 @@
-<h1>New Product</h1>
+<h2>New Product</h2>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', products_path %>
+
+<h1></h1>
+<% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+<% end %>

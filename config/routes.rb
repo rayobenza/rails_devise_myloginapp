@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  root to: 'products#index'
   devise_for :users
+  resources :users
   resources :products
-  root 'products#index'
+
+  #devise_for :users
+  #resources :products
+  #root 'products#index'
 
   #authenticate :user do
   #  scope "/admin" do
