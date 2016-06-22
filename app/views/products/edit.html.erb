@@ -1,5 +1,12 @@
 <h2>Editing Product</h2>
 
+<h1></h1>
+<% if current_user.email == 'rayobenza@gmail.com' %>
+  <p>This is for super admin Ray only</p>
+<% elsif current_user.email == 'super@admin.io' %>
+  <p>This is for super@admin only</p>
+<% end %>
+
 <%= render 'form' %>
 
 <%= link_to 'Show', @product %> |
